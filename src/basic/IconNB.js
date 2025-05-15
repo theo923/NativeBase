@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connectStyle } from 'native-base-shoutem-theme';
+import { connectStyle, ThemeContext } from 'native-base-shoutem-theme';
 import { get } from 'lodash';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -24,9 +24,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
 const Icomoon = createIconSetFromIcoMoon(icoMoonConfig);
 
 class IconNB extends React.PureComponent {
-  static contextTypes = {
-    theme: PropTypes.object,
-  };
+  static contextType = ThemeContext;
 
   constructor(props) {
     super(props);

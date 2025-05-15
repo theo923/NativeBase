@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ActivityIndicator } from 'react-native';
-import { connectStyle } from 'native-base-shoutem-theme';
+import { connectStyle, ThemeContext } from 'native-base-shoutem-theme';
 
 import variable from '../theme/variables/platform';
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
 
 class Spinner extends Component {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  static contextTypes = ThemeContext;
+  
   render() {
     const variables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables

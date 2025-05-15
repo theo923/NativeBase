@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, Platform } from 'react-native';
-import { connectStyle } from 'native-base-shoutem-theme';
+import { connectStyle, ThemeContext } from 'native-base-shoutem-theme';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
@@ -9,9 +9,8 @@ import variable from '../theme/variables/platform';
 import computeProps from '../utils/computeProps';
 
 class Radio extends Component {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  static contextType = ThemeContext;
+  
   prepareRootProps() {
     const defaultProps = {
       standardStyle: false

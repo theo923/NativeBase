@@ -11,9 +11,9 @@ import NativeBaseComponent from './Base/NativeBaseComponent';
 
 class Input extends NativeBaseComponent {
   render() {
-    const variables = this.context.theme
-      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
-      : variable;
+    const theme = this.getContextTheme();
+    const variables =
+      theme['@@shoutem.theme/themeStyle'].variables || variable;
     return (
       <TextInput
         ref={c => {

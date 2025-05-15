@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Platform } from 'react-native';
-import { connectStyle } from 'native-base-shoutem-theme';
+import { connectStyle, ThemeContext } from 'native-base-shoutem-theme';
 
 import variable from '../../theme/variables/platform';
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames';
@@ -14,9 +14,7 @@ const IS_IOS = Platform.OS === 'ios';
 
 
 class Icon extends React.PureComponent {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  static contextType = ThemeContext;
 
   setRoot(c){
     this._root = c;
