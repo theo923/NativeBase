@@ -3,7 +3,6 @@
 /* eslint-disable react/sort-comp */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import createReactClass from 'create-react-class';
 import { FlatList, Modal, View } from 'react-native';
 import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 import { Picker } from '@react-native-picker/picker';
@@ -252,11 +251,7 @@ class PickerNB extends Component {
 }
 
 // eslint-disable-next-line react/no-multi-comp
-PickerNB.Item = createReactClass({
-  render() {
-    return <Picker.Item {...this.props()} />;
-  }
-});
+PickerNB.Item = (props) => <Picker.Item {...props} />;
 
 PickerNB.propTypes = {
   ...ViewPropTypes,

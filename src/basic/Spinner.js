@@ -7,7 +7,7 @@ import variable from '../theme/variables/platform';
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
 
 class Spinner extends Component {
-  static contextTypes = ThemeContext;
+  static contextType = ThemeContext;
   
   render() {
     const variables = this.context.theme

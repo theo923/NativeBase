@@ -31,7 +31,7 @@
   "private": false,
   "dependencies": {
     "@codler/react-native-keyboard-aware-scroll-view": "1.0.1",
-    "@react-native-community/datetimepicker": "^3.0.2",
+    "@react-native-community/datetimepicker": "8.2.0",
     "@react-native-picker/picker": "^1.9.7",
     "blueimp-md5": "^2.5.0",
     "clamp": "^1.0.1",
